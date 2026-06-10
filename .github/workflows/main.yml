@@ -15,3 +15,18 @@ jobs:
         
       - name: Mostrar HTML 
         run: cat index.html   
+
+      - name: Existe index.html? 
+        run: |
+          if [ -f "index.html" ]; then
+            echo "O arquivo index.html existe."
+          else
+            echo "O arquivo index.html não existe."
+          fi
+
+      - name: Listar arquivos 
+        run: ls -la
+
+      - name: Mostrar conteúdo do diretório 
+        run: ls -R  
+
